@@ -10,7 +10,7 @@ This sample app uses fragments with listView that contains images and text. It a
 
 The MIT License (MIT)
 
-Copyright (c) [2016] [Adrian Ivasku]
+Copyright (c) 2016 Adrian Ivasku
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
