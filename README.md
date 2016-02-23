@@ -6,6 +6,8 @@ This sample app uses fragments with listView that contains images and text. It a
 
 [![](http://4.bp.blogspot.com/-Bfh2unbdc84/UcGqVJKdMwI/AAAAAAAAAOc/W4kGiTU-fYk/s1600/google_plus_58.png)](https://plus.google.com/103601129949347068254)  [![](http://3.bp.blogspot.com/-_JSQStno9N8/UcGWEW7V9AI/AAAAAAAAAOM/_qFVUjIaySg/s1600/linkedin.png)](https://rs.linkedin.com/in/adrianivasku)
 
+I have added some screenShoots how it looks. Files 1.png, 2.png and 3.png. When you use it, it will differ, based on what will be the news on that day :).
+
 #License
 
 The MIT License (MIT)
