@@ -107,7 +107,11 @@ public class Utils {
            /* StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);*/
             Elements newsHeadlines = null;
-            Document doc = Jsoup.connect(site).timeout(600000).get();
+            Document doc = Jsoup.connect(site).timeout(600000)
+            .data("query", "Java")
+            .userAgent("Mozilla")
+            .cookie("auth", "token").get();
+
             return doc;
         }
         catch (Exception e) {
