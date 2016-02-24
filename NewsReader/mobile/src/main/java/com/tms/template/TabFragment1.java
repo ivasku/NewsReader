@@ -19,7 +19,6 @@ import org.jsoup.nodes.Document;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class TabFragment1 extends Fragment {
     private View inflatedView = null;
     private ProgressBarHandler mProgressBarHandler;
@@ -167,7 +166,6 @@ public class TabFragment1 extends Fragment {
         };
     }
 
-
     private void loadImages(){
 
         String img1Link1 = MainActivity._Instance.mainLink + util.GetElement(
@@ -200,18 +198,6 @@ public class TabFragment1 extends Fragment {
         String img1Link10 = MainActivity._Instance.mainLink + util.GetElement(
                 "div.gd-container-1:nth-child(6) > div:nth-child(5) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > div:nth-child(1) > img:nth-child(2)", "http://www.istinomer.rs/", 4, doc);
 
-        //Log.d("TMS","Image is: " + img1Link2);
-       /* images = new Bitmap[]{util.getImageBitmap(img1Link1),
-                util.getImageBitmap(img1Link2),
-                util.getImageBitmap(img1Link3),
-                util.getImageBitmap(img1Link4),
-                util.getImageBitmap(img1Link5),
-                util.getImageBitmap(img1Link6),
-                util.getImageBitmap(img1Link7),
-                util.getImageBitmap(img1Link8),
-                util.getImageBitmap(img1Link9),
-                util.getImageBitmap(img1Link10)};*/
-
         images = new ArrayList<Bitmap>();
         images.add(0,util.getImageBitmap(img1Link1));
         images.add(1,util.getImageBitmap(img1Link2));
@@ -223,7 +209,6 @@ public class TabFragment1 extends Fragment {
         images.add(7,util.getImageBitmap(img1Link8));
         images.add(8,util.getImageBitmap(img1Link9));
         images.add(9,util.getImageBitmap(img1Link10));
-
     }
 
     /*
