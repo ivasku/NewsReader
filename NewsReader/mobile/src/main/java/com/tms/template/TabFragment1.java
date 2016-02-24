@@ -21,25 +21,16 @@ import java.util.List;
 
 
 public class TabFragment1 extends Fragment {
-    View inflatedView = null;
-    ProgressBarHandler mProgressBarHandler;
-    public static TabFragment1 _Instance;
-    private String[] Headlines = {};
-    Utils util = new Utils();
-    public Document doc;
+    private View inflatedView = null;
+    private ProgressBarHandler mProgressBarHandler;
 
-    Bitmap [] images;
-    String vestiDescription1;
-    String vestiDescription2;
-    String vestiDescription3;
-    String vestiDescription4;
-    String vestiDescription5;
-    String vestiDescription6;
-    String vestiDescription7;
-    String vestiDescription8;
-    String vestiDescription9;
-    String vestiDescription10;
-    String[] HeadlinesDescription;
+    public static TabFragment1 _Instance;
+    Utils util = new Utils();
+
+    private Document doc;
+    private List<Bitmap> images;
+    private String[] HeadlinesDescription;
+    private String[] Headlines = {};
 
     public List getDocumentLinks(){
         List<String> links = new ArrayList<String>();
@@ -131,35 +122,35 @@ public class TabFragment1 extends Fragment {
                 util.GetElement("div.item-2:nth-child(10)", "http://www.istinomer.rs/",0, doc)
         };
 
-        vestiDescription1 = util.GetElement("div.item-big h2", "http://www.istinomer.rs/", 2 , doc) + System.getProperty("line.separator")
+        String vestiDescription1 = util.GetElement("div.item-big h2", "http://www.istinomer.rs/", 2 , doc) + System.getProperty("line.separator")
                 + util.GetElement("div.item-big h3","http://www.istinomer.rs/",2, doc);
 
-        vestiDescription2 = util.GetElement("div.grid-8 h2 a", "http://www.istinomer.rs/", 2, doc) + System.getProperty("line.separator")
+        String vestiDescription2 = util.GetElement("div.grid-8 h2 a", "http://www.istinomer.rs/", 2, doc) + System.getProperty("line.separator")
                 + util.GetElement("div.grid-8 h3", "http://www.istinomer.rs/", 2, doc);
 
-        vestiDescription3 = util.GetElement(
+        String vestiDescription3 = util.GetElement(
                 "div.gd-container-1:nth-child(6) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > h3:nth-child(2)", "http://www.istinomer.rs/", 0, doc);
 
-        vestiDescription4 = util.GetElement(
+        String vestiDescription4 = util.GetElement(
                 "div.gd-container-1:nth-child(6) > div:nth-child(4) > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > h3:nth-child(2)", "http://www.istinomer.rs/", 0, doc);
 
-        vestiDescription5 = util.GetElement(
+        String vestiDescription5 = util.GetElement(
                 "div.gd-container-1:nth-child(6) > div:nth-child(4) > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > h3:nth-child(2)", "http://www.istinomer.rs/", 0, doc);
 
-        vestiDescription6 = util.GetElement(
+        String vestiDescription6 = util.GetElement(
                 "div.gd-container-1:nth-child(6) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > h2:nth-child(4)", "http://www.istinomer.rs/", 0, doc) + System.getProperty("line.separator")
                 + util.GetElement("div.gd-container-1:nth-child(6) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > h3:nth-child(5)", "http://www.istinomer.rs/", 2, doc);
 
-        vestiDescription7 = util.GetElement(
+        String vestiDescription7 = util.GetElement(
                 "div.gd-container-1:nth-child(6) > div:nth-child(5) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > h3:nth-child(2)", "http://www.istinomer.rs/", 0, doc);
 
-        vestiDescription8 = util.GetElement(
+        String vestiDescription8 = util.GetElement(
                 "div.gd-container-1:nth-child(6) > div:nth-child(5) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > h3:nth-child(2)", "http://www.istinomer.rs/", 0, doc);
 
-        vestiDescription9 = util.GetElement(
+        String vestiDescription9 = util.GetElement(
                 "div.gd-container-1:nth-child(6) > div:nth-child(5) > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > h3:nth-child(2)", "http://www.istinomer.rs/", 0, doc);
 
-        vestiDescription10 = util.GetElement(
+        String vestiDescription10 = util.GetElement(
                 "div.gd-container-1:nth-child(6) > div:nth-child(5) > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > h3:nth-child(2)", "http://www.istinomer.rs/", 0, doc);
 
         HeadlinesDescription = new String[]{
@@ -210,7 +201,7 @@ public class TabFragment1 extends Fragment {
                 "div.gd-container-1:nth-child(6) > div:nth-child(5) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > div:nth-child(1) > img:nth-child(2)", "http://www.istinomer.rs/", 4, doc);
 
         //Log.d("TMS","Image is: " + img1Link2);
-        images = new Bitmap[]{util.getImageBitmap(img1Link1),
+       /* images = new Bitmap[]{util.getImageBitmap(img1Link1),
                 util.getImageBitmap(img1Link2),
                 util.getImageBitmap(img1Link3),
                 util.getImageBitmap(img1Link4),
@@ -219,7 +210,20 @@ public class TabFragment1 extends Fragment {
                 util.getImageBitmap(img1Link7),
                 util.getImageBitmap(img1Link8),
                 util.getImageBitmap(img1Link9),
-                util.getImageBitmap(img1Link10)};
+                util.getImageBitmap(img1Link10)};*/
+
+        images = new ArrayList<Bitmap>();
+        images.add(0,util.getImageBitmap(img1Link1));
+        images.add(1,util.getImageBitmap(img1Link2));
+        images.add(2,util.getImageBitmap(img1Link3));
+        images.add(3,util.getImageBitmap(img1Link4));
+        images.add(4,util.getImageBitmap(img1Link5));
+        images.add(5,util.getImageBitmap(img1Link6));
+        images.add(6,util.getImageBitmap(img1Link7));
+        images.add(7,util.getImageBitmap(img1Link8));
+        images.add(8,util.getImageBitmap(img1Link9));
+        images.add(9,util.getImageBitmap(img1Link10));
+
     }
 
     /*

@@ -9,6 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 /**
  * Created by Adrian on 2/21/2016.
  */
@@ -23,10 +25,10 @@ public class CustomAdapter extends BaseAdapter {
     String items[];
     String underItems[];
     LayoutInflater mInflater;
-    Bitmap[] image;
+    List<Bitmap> image;
     //Bitmap[] imageStatus;
 
-    public CustomAdapter(Context context, String[] items , String[] underItems, Bitmap[] image) {
+    public CustomAdapter(Context context, String[] items , String[] underItems, List<Bitmap> image) {
         mInflater = LayoutInflater.from(context);
         this.items = items;
         this.underItems = underItems;
@@ -69,7 +71,7 @@ public class CustomAdapter extends BaseAdapter {
         }
         holder.tv.setText(items[position]);
         holder.tv2.setText(underItems[position]);
-        holder.iv.setImageBitmap(image[position]);
+        holder.iv.setImageBitmap(image.get(position));
         //holder.iv2.setImageBitmap(imageStatus[position]);
         // use holder.iv to set whatever image you want according to the position
         return convertView;
