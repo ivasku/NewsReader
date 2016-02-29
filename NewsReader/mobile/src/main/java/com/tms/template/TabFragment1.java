@@ -69,9 +69,11 @@ public class TabFragment1 extends Fragment {
 
     // starts AsyncTask in parallel
     private void StartAsyncTaskInParallel(Task task) {
+        // for 3.0+
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
             task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         else
+        // < 3.0
             task.execute();
     }
 
